@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #8e2de2, #ff416c);
+      background-size: 200% 200%; /* Ensure the gradient is large enough for smooth movement */
+      animation: waveEffect 10s ease-in-out infinite; /* Animates background to flow like waves */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    @keyframes waveEffect {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .glass-container {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      color: #333;
+      text-align: justify;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #444;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .persian {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Vazir', sans-serif;
+      font-size: 18px;
+    }
+
+    /* Email Link Style */
+    .email-link {
+      display: inline-block;
+      font-size: 18px;
+      color: #007BFF; /* Initial color of the email */
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .email-link:hover {
+      color: #0056b3; /* Change color on hover */
+    }
+
+    .email-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #0056b3; /* Underline color */
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .email-link:hover::before {
+      width: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+  </style>
+
+  <!-- Persian Web Font -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="glass-container">
+    <h1>Rahmat's Status</h1>
+    <p>
+        I am currently studying for the master's degree entrance exam. That's why I have put my activities on hold. For more information, contact the email below.
+    </p>
+    <p class="persian">
+      در حال حاضر در حال مطالعه برای کنکور کارشناسی ارشد هستم. این آزمون در دوم اسفند امسال برگزار خواهد شد و پس از آن به دنبال موقعیت برای همکاری خواهم بود. جهت ارتباط با ایمیل زیر در تماس باشید.
+    </p>
+
+    <!-- Email Link -->
+    <a href="mailto:rahmat2022a@gmail.com" class="email-link">Rahmat2022a@gmail.com</a>
+  </div>
+</body>
+</html>
